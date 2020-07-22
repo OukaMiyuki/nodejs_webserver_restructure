@@ -1,4 +1,3 @@
-const Joi = require('joi'); //capitalize the first letter of the variable name means it is a class (Joi)
 const express = require('express');
 const app = express();
 const home = require('./Routes/home');

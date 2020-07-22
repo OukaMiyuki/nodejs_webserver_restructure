@@ -1,3 +1,4 @@
+const Joi = require('joi'); //capitalize the first letter of the variable name means it is a class (Joi)
 const express = require('express');
 const router = express.Router();
 
@@ -24,7 +25,7 @@ router.get('/', (request, response) => { //to fetch all data
 
 router.post('/', (request, response) => { //insert data
     const { error } = validateInput(request.body); //using object destructing
-    if(error) return status(400).send(error.details[0].message);
+    if(error) return response.status(400).send(error.details[0].message);
 
     const postingManga = {
         id : manga.length+1,
